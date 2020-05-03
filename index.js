@@ -6,32 +6,31 @@ const map = {
     numeric: '1234567890'
 };
 
-module.exports = {
+function API() {
+    return crypto.createHmac('sha256', generate())
+        .update((new Date()).getTime().toString())
+        .digest('hex');
+}
 
-    generate: (len, props) => {
-        len = toNum(len, 12);
-        props = props || {};
-        let type = (props.type && opts.includes(props.type)) ? props.type : defaultOpt;
+API.generate = (len, props) => {
+    len = toNum(len, 64);
+    props = props || {};
+    let type = (props.type && opts.includes(props.type)) ? props.type : defaultOpt;
 
-        return generate(len, type, {
-            add: toStr(props.add),
-            custom: toStr(props.custom)
-        });
-    },
-
-    hash: () => {
-        return crypto.createHmac('sha256', generate())
-            .update((new Date()).getTime().toString())
-            .digest('hex');
-    },
-
-    range: (min, max) => {
-        min = toNum(min);
-        max = toNum(max, 9);
-        return rnd(max, min);
-    }
-
+    return generate(len, type, {
+        add: toStr(props.add),
+        custom: toStr(props.custom),
+        camelCase: (props.camelCase === true) ? true : null
+    });
 };
+
+API.range = (min, max) => {
+    min = toNum(min);
+    max = toNum(max, 9);
+    return rnd(max, min);
+};
+
+module.exports = API;
 
 function generate(len, type, props) {
     let s = '';
@@ -60,7 +59,8 @@ function get(type, props) {
         let idx = rnd(chooser.length);
         chooser = chooser.slice(0, idx) + props.add + chooser.slice(idx);
     }
-    return chooser.charAt(rnd(chooser.length-1));
+    let ret = chooser.charAt(rnd(chooser.length-1));
+    return (props.camelCase && rnd(1) === 0) ? ret.toUpperCase() : ret;
 }
 
 function rnd(max, min) {
