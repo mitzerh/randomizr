@@ -4,23 +4,33 @@
   "description": "Random string generator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "eslintConfig": {
-      "extends": "eslint:recommended",
-      "rules": {
-          "linebreak-style": ["error", "unix"],
-          "semi": ["error", "always"],
-          "comma-dangle": ["error", "never"],
-          "no-cond-assign": ["error", "always"]
-      },
-      "env": {
-          "es6": true,
-          "node": true
-      },
-      "globals": {
-
-      }
+    "extends": "eslint:recommended",
+    "rules": {
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "comma-dangle": [
+        "error",
+        "never"
+      ],
+      "no-cond-assign": [
+        "error",
+        "always"
+      ]
+    },
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "globals": {}
   },
   "repository": {
     "type": "git",
