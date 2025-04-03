@@ -1,4 +1,5 @@
-const crypto = require('crypto');
+import crypto from 'crypto';
+
 const defaultOpt = 'alphanumeric';
 const opts = [defaultOpt, 'alpha', 'numeric'];
 const map = {
@@ -30,7 +31,7 @@ API.range = (min, max) => {
     return rnd(max, min);
 };
 
-module.exports = API;
+export default API;
 
 function generate(len, type, props) {
     let s = '';
@@ -42,7 +43,7 @@ function generate(len, type, props) {
 
 function get(type, props) {
     if (props.custom) {
-        return props.custom.charAt(rnd(props.custom.length-1));
+        return props.custom.charAt(rnd(props.custom.length - 1));
     }
 
     let chooser;
@@ -59,7 +60,7 @@ function get(type, props) {
         let idx = rnd(chooser.length);
         chooser = chooser.slice(0, idx) + props.add + chooser.slice(idx);
     }
-    let ret = chooser.charAt(rnd(chooser.length-1));
+    let ret = chooser.charAt(rnd(chooser.length - 1));
     return (props.camelCase && rnd(1) === 0) ? ret.toUpperCase() : ret;
 }
 
