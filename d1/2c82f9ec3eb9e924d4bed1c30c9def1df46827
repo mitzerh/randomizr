@@ -1,0 +1,12 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.10",
+  "base_commit_sha": "d12c82f9ec3eb9e924d4bed1c30c9def1df46827",
+  "prompts": {},
+  "humans": {
+    "h_cf1c04cba715cb": {
+      "author": "Helcon Mabesa <helcon.mabesa@fox.com>"
+    }
+  }
+}
