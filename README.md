@@ -8,8 +8,18 @@ Random string generator
 npm install randomizr
 ```
 
+CommonJS:
+
 ```js
 const randomizr = require('randomizr');
+
+let hash = randomizr();
+```
+
+ES modules (Node `"type": "module"`):
+
+```js
+import randomizr from 'randomizr';
 
 let hash = randomizr();
 ```

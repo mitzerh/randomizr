@@ -1,4 +1,4 @@
-import crypto from 'crypto';
+const crypto = require('crypto');
 
 const defaultOpt = 'alphanumeric';
 const opts = [defaultOpt, 'alpha', 'numeric'];
@@ -31,7 +31,7 @@ API.range = (min, max) => {
     return rnd(max, min);
 };
 
-export default API;
+module.exports = API;
 
 function generate(len, type, props) {
     let s = '';

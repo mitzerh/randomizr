@@ -1,11 +1,17 @@
 {
   "name": "randomizr",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Random string generator",
-  "main": "index.mjs",
-  "type": "module",
+  "main": "index.cjs",
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "import": "./index.cjs",
+      "default": "./index.cjs"
+    }
+  },
   "scripts": {
-    "test": "node test.mjs"
+    "test": "node test.cjs"
   },
   "repository": {
     "type": "git",

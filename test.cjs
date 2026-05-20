@@ -1,4 +1,4 @@
-import randomizr from './index.mjs'
+const randomizr = require('./index.cjs')
 
 const iter = 100000
 const log = console.log
