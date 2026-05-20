@@ -21,9 +21,5 @@
   "bugs": {
     "url": "https://github.com/mitzerh/randomizr/issues"
   },
-  "homepage": "https://github.com/mitzerh/randomizr#readme",
-  "devDependencies": {
-    "eslint": "^9.23.0",
-    "eslint-config-recommended": "^4.1.0"
-  }
+  "homepage": "https://github.com/mitzerh/randomizr#readme"
 }
