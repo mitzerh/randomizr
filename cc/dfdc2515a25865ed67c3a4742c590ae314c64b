@@ -1,0 +1,14 @@
+package.json
+  h_cf1c04cba715cb 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.10",
+  "base_commit_sha": "ccdfdc2515a25865ed67c3a4742c590ae314c64b",
+  "prompts": {},
+  "humans": {
+    "h_cf1c04cba715cb": {
+      "author": "Helcon Mabesa <helcon.mabesa@fox.com>"
+    }
+  }
+}
