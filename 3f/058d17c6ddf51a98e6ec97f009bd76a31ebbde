@@ -1,0 +1,25 @@
+package.json
+  s_08f2e706c0af40::t_5681b2ee4dab56 3,5-12,14
+README.md
+  s_08f2e706c0af40::t_8a67cee3f604e0 11-12,19-22
+index.cjs
+  s_08f2e706c0af40::t_a2a123d4960f7d 1,34
+test.cjs
+  s_08f2e706c0af40::t_7fd85b51beb2cb 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "3f058d17c6ddf51a98e6ec97f009bd76a31ebbde",
+  "prompts": {},
+  "sessions": {
+    "s_08f2e706c0af40": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "8dfb5660-ee45-414e-8609-4adcd922a255",
+        "model": "claude-opus-4-7-high"
+      },
+      "human_author": "Helcon Mabesa <helcon.mabesa@fox.com>"
+    }
+  }
+}
